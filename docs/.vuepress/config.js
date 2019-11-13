@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Jerry\'s Blog',
-  description: 'Jerry\'s Blog',
+  title: 'Jerry\'s Official Site',
+  description: 'Jerry\'s Official Site',
   base: '/',
   theme: 'homesite',
   themeConfig: {
