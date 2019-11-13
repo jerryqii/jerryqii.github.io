@@ -14,6 +14,7 @@ cd docs/.vuepress/dist
 
 # 如果你是要部署到自定义域名
 echo 'jerryqi.cn' > CNAME
+
 cd -
 
 # 提交代码
