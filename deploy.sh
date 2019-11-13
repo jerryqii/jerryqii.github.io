@@ -3,9 +3,6 @@
 # 终止一个错误
 set -e
 
-dd=$(date '+%Y-%m-%d %H:%M:%S')
-deploycomment="Deploy at ${dd}"
-
 # 构建
 npm run build
 
@@ -17,20 +14,22 @@ echo 'jerryqi.cn' > CNAME
 
 cd -
 
+# 生成当前提交comment
+dd=$(date '+%Y-%m-%d %H:%M:%S')
+deploycomment="Deploy at ${dd}"
+
 # 提交代码
 git add -A
 git commit -m "$deploycomment"
 git push origin master
-# git init
-# git add -A
-# git commit -m "$deploycomment"
 
-# 如果你想要部署到 https://<USERNAME>.github.io
-# git push -f git@github.com:jerryqii/jerryqii.github.io.git master
+# 因为GitHub不能定义Serve的目录, 所以这里通过subtree给他提交到GitHub
+# git subtree add --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master --squash
 git subtree push --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master
 
 cd -
 
+# 相关命令参考
 # git subtree add --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master --squash
 # git subtree pull --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master --squash
 # git subtree push --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master
@@ -38,3 +37,6 @@ cd -
 # git subtree add --prefix=docs/.vuepress/dist github master --squash
 # git subtree pull --prefix=docs/.vuepress/dist github master --squash
 # git subtree push --prefix=docs/.vuepress/dist github master
+
+# git subtree教程
+# https://www.jianshu.com/p/d42d330bfead
