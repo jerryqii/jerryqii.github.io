@@ -10,7 +10,10 @@ npm run build
 cd docs/.vuepress/dist
 
 # 如果你是要部署到自定义域名
-echo 'jerryqi.cn' > CNAME
+echo "jerryqi.cn" > CNAME
+
+# 添加readme
+echo "# Jerry's Official Site" > CNAME
 
 cd -
 
