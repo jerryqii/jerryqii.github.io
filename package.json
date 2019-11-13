@@ -1,0 +1,24 @@
+{
+  "name": "jerryqi",
+  "version": "1.0.0",
+  "description": "Description Jerry's Official Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:jerryqi/jerryqi.git"
+  },
+  "keywords": [
+    "jerryqi"
+  ],
+  "author": "jerryqi",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "vuepress-theme-homesite": "^1.0.1"
+  }
+}
