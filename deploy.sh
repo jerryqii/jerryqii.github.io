@@ -29,6 +29,7 @@ git push -f git@github.com:jerryqii/jerryqii.github.io.git master
 
 cd -
 
+git subtree add --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master --squash
 git subtree pull --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master --squash
 git subtree push --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master
 # git remote add -f github git@github.com:jerryqii/jerryqii.github.io.git
