@@ -9,17 +9,17 @@ deploycomment="Deploy at ${dd}"
 # 构建
 npm run build
 
-git add -A
-git commit -m "$deploycomment"
-git push origin master
-
 # 进入生成的构建文件夹
 cd docs/.vuepress/dist
 
 # 如果你是要部署到自定义域名
 echo 'jerryqi.cn' > CNAME
-
 cd -
+
+# 提交代码
+git add -A
+git commit -m "$deploycomment"
+git push origin master
 # git init
 # git add -A
 # git commit -m "$deploycomment"
