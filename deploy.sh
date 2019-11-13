@@ -20,10 +20,10 @@ cd docs/.vuepress/dist
 echo 'jerryqi.cn' > CNAME
 
 git submodule init
-git add -A
-git commit -m "$deploycomment"
+git submodule add -A
+git submodule commit -m "$deploycomment"
 
 # 如果你想要部署到 https://<USERNAME>.github.io
-git push -f git@github.com:jerryqii/jerryqii.github.io.git master
+git submodule push -f git@github.com:jerryqii/jerryqii.github.io.git master
 
 cd -
