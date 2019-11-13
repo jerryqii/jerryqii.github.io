@@ -13,7 +13,7 @@ cd docs/.vuepress/dist
 echo "jerryqi.cn" > CNAME
 
 # 添加readme
-echo "# Jerry's Official Site" > CNAME
+echo "# Jerry's Official Site" > README.md
 
 cd -
 
