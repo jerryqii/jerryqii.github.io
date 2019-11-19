@@ -28,7 +28,7 @@ git push origin master
 
 # 因为GitHub不能定义Serve的目录, 所以这里通过subtree给他提交到GitHub
 # git subtree add --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master --squash
-git subtree push --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master -f
+git subtree push --prefix=docs/.vuepress/dist git@github.com:jerryqii/jerryqii.github.io.git master
 
 cd -
 
